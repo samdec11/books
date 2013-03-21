@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.find(:all, :order => 'title')
+    @books = Book.order(:year)
   end
   def new
     @book = Book.new

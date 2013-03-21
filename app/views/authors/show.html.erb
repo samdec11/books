@@ -17,7 +17,7 @@
 <%= link_to 'Edit', edit_author_path(@author) %>
 </div>
 
-<% @author.books.each do |book| %>
+<% @author.books.order(:year).each do |book| %>
 <ul>
   <li><%= link_to image_tag(book.image, :class =>'thumbnail'), book %></li>
 </ul>
